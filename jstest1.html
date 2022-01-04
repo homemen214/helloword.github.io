@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="form1">
+			<table>
+				<tr>
+					<td>
+						输入1：
+					</td>
+					<td>
+						<input type="text" name="in1" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						输入2：
+					</td>
+					<td>
+						<input type="text" name="in2" />
+					</td>
+				</tr>
+			</table>
+			<p><a href="javascript:void window.open();">open new window</a></p>
+			<p> <span id="s1"></span></p>
+			<p> <span id="s2"></span></p>
+		</form>
+		<button onclick="shuchu();">点击</button>
+		<script lang="javascript">
+			function shuchu(){
+				var inn1 = document.form1.in1.value;
+				var s1 = document.getElementById("s1");
+				
+				s1.innerHTML= inn1;
+				var x=1;
+				var y=x;
+			    function add_to_total(total, x){
+					total = total + x;
+					
+				}
+				var totals = new Array(3);
+				var newtotals = new Array(3);
+				totals = [1,2,3]
+				totals2 = [6,7,8]
+				// newtotals = [4,5,6];
+				function add_to_total2(totals, x){
+					
+					newtotals = [1,2,3];
+					newtotals[0] = newtotals[0] + x;
+					newtotals[1] = newtotals[1] + x;
+					newtotals[2] = newtotals[2] + x;
+					totals = newtotals;
+					console.log(newtotals[0]);
+				}
+				
+				// totals = newtotals;
+				add_to_total2(totals,x);
+				totals = newtotals;
+				s1.innerHTML= totals[0];
+				var scope = new String("global");
+				function f() {
+					var point = {x:1,y:2};
+					
+					if("valueOf" in point){
+						console.log("the same");
+					}
+					for(f in point){
+						document.write('point.'+ f + ' = ' + point[f]);
+						document.write('<br />')
+					}
+					
+				}
+				var person= {
+				       firstName: "Jack",
+				       lastName: "Smith",
+				       fullName: function () {
+				          return this.firstName + "   " + this.lastName;        
+				       }
+				 };
+
+				function output(){
+					
+					document.write(person.fullName());
+					o = {x:1,y:2,z:3}
+					for(a in o){
+						document.write(o[a]);
+						document.write("</br>")
+					}
+					// for(i in a){
+					// 	document.write(i)
+					// }
+					document.write(multiply(2,1));
+					document.write("</br>")
+					
+					
+				}
+				function letMethed(){
+					let myName = "Bob"
+					myName = "Boss"
+					if(myName == "Bob"){
+						alert("my name is " + myName);
+					}
+					else{
+						alert("my name is None.")
+					}
+				}
+				function multiply(num1,num2){
+					let result = num1 + num2;
+					return result;
+				}
+				
+				
+				letMethed();
+				f();
+				output();
+				
+			}
+			
+		</script>
+		
+	</body>
+</html>

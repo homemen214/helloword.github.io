@@ -1,0 +1,22 @@
+ .droppable {
+	 width: 150px; 
+	 height: 150px; 
+	 padding: 0.5em; 
+	 float: left; 
+	 margin: 10px; 
+	 border: 2px solid #000000;
+	 
+	 }
+	 .droppable2 {
+	 	 width: 150px; 
+	 	 height: 150px; 
+	 	 padding: 0.5em; 
+	 	 float: left; 
+	 	 margin: 10px; 
+	 	 border: 2px solid #000000;
+		 background-color: #003EFF;
+	 	 
+	 	 }
+#selcet .ui-selected{
+				background-color: #007FFF;
+			}
